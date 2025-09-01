@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="#E3F2FD"
+        android:pathData="M24,24m-24,0a24,24 0,1 1,48 0a24,24 0,1 1,-48 0"/>
+    
+    <!-- Face -->
+    <path
+        android:fillColor="#FFD4B3"
+        android:pathData="M16,18 Q24,22 32,18 Q32,14 24,14 Q16,14 16,18"/>
+    
+    <!-- Blue hoodie -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M14,16 L34,16 L34,30 L14,30 Z"/>
+    
+    <!-- Hoodie hood -->
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M14,16 Q24,12 34,16 L34,18 Q24,14 14,18 Z"/>
+    
+    <!-- Eyes -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M20,18 Q21,18 21,19 Q21,20 20,20 Q19,20 19,19 Q19,18 20,18"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M28,18 Q29,18 29,19 Q29,20 28,20 Q27,20 27,19 Q27,18 28,18"/>
+    
+    <!-- Smile -->
+    <path
+        android:fillColor="#FF6B6B"
+        android:pathData="M20,22 Q24,24 28,22"/>
+</vector> 

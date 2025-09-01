@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "803969748233",
+    "project_id": "stegochat-f8f9b",
+    "storage_bucket": "stegochat-f8f9b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803969748233:android:55a66805859b307891d7d8",
+        "android_client_info": {
+          "package_name": "com.example.stegochat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAobqEsDIwvA7hEudMOa_QP8a77eu9KO_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

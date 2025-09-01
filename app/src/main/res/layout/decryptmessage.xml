@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Main Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Page Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Decrypt Message"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                tools:ignore="HardcodedText" />
+
+            <!-- Select Sender Friend Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Sender Friend"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/friendSelectionArea"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/white_rounded_card"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/logo17"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="User avatar"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/selectedFriendText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Choose the sender of this stego image"
+                    android:textColor="#546E7A"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_dropdown_arrow"
+                    android:contentDescription="Dropdown"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- Upload Stego Image Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload Stego Image"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/imageSelectionArea"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/white_rounded_card"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/logo31"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="Image placeholder"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Select Image from Device"
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,TextContrastCheck" />
+            </LinearLayout>
+
+            <!-- Reveal Message Button -->
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Reveal Message"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#4c51ff"
+                android:layout_marginBottom="16dp"
+                tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+            <!-- Verification Status -->
+            <LinearLayout
+                android:id="@+id/verificationContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/green_verification_bg"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_check_circle_green"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Verified"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/verificationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Verified message"
+                    android:textColor="#2E7D32"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <!-- Decrypted Message Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Decrypted Message"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/decryptedMessageContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="80dp"
+                android:background="@drawable/white_rounded_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/decryptedMessageText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="2dp"
+                    android:text="Your decrypted message will appear here..."
+                    android:textColor="#999999"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,TextContrastCheck" />
+            </LinearLayout>
+
+            <!-- Copy Button -->
+            <LinearLayout
+                android:id="@+id/copyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="8dp"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_copy_blue"
+                    android:layout_marginEnd="6dp"
+                    android:contentDescription="Copy"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Copy"
+                    android:textColor="#4285F4"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,TextContrastCheck" />
+            </LinearLayout>
+
+            <!-- Error Message -->
+            <LinearLayout
+                android:id="@+id/errorContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/red_error_bg"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:layout_marginBottom="40dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_warning_red"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Warning"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/errorMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Decryption failed. Please check if you selected the correct sender."
+                    android:textColor="#D32F2F"
+                    android:textSize="14sp"
+                    android:lineSpacingExtra="2dp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Home Indicator -->
+        <View
+            android:layout_width="134dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#000000"
+            android:alpha="0.3"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+</ScrollView>

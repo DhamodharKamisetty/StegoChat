@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Status Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9:41"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- Signal bars -->
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_signal_bars" />
+
+        <!-- WiFi icon -->
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_wifi" />
+
+        <!-- Battery icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ic_battery" />
+    </LinearLayout>
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical"
+        android:elevation="2dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/logo37"
+            android:scaleType="centerCrop"
+            android:clickable="true"
+            android:onClick="goToProfileEdit"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alex Mitchell"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online"
+                android:textColor="#4CAF50"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/videoCallButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/logo48"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Video Call" />
+
+        <ImageView
+            android:id="@+id/moreOptionsButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/logo49"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="More Options" />
+    </LinearLayout>
+
+    <!-- Messages Container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F5F5F5"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Incoming message -->
+            <LinearLayout
+                android:id="@+id/incomingMessage1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/message_long_press_ripple">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@drawable/message_bubble_incoming"
+                    android:text="Hey, how are you?"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:padding="12dp"
+                    android:maxWidth="280dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9:35 AM"
+                    android:textColor="#999999"
+                    android:textSize="10sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Outgoing message -->
+            <LinearLayout
+                android:id="@+id/outgoingMessage1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/message_long_press_ripple">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/message_bubble_outgoing"
+                    android:text="I'm good! Just finished work."
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:padding="12dp"
+                    android:maxWidth="280dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9:37 AM"
+                    android:textColor="#999999"
+                    android:textSize="10sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="8dp" />
+            </LinearLayout>
+
+            <!-- Image message -->
+            <LinearLayout
+                android:id="@+id/imageMessage1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/message_long_press_ripple">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/message_bubble_outgoing"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/logo25"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/rounded_corners" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Reveal Message"
+                            android:textColor="#4A90E2"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_download"
+                            android:layout_marginStart="8dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Download"
+                            android:textColor="#999999"
+                            android:textSize="10sp"
+                            android:layout_marginStart="4dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9:38 AM"
+                    android:textColor="#999999"
+                    android:textSize="10sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="8dp" />
+            </LinearLayout>
+
+            <!-- Hidden message -->
+            <LinearLayout
+                android:id="@+id/hiddenMessage1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/message_long_press_ripple">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@drawable/message_bubble_incoming"
+                    android:text="Check this hidden message"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:padding="12dp"
+                    android:maxWidth="280dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9:43 AM"
+                    android:textColor="#999999"
+                    android:textSize="10sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Response message -->
+            <LinearLayout
+                android:id="@+id/responseMessage1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@drawable/message_long_press_ripple">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@drawable/message_bubble_outgoing"
+                    android:text="Got it, let me decode!"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:padding="12dp"
+                    android:maxWidth="280dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9:45 AM"
+                    android:textColor="#999999"
+                    android:textSize="10sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Message Input -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/attachButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/logo50"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Attach" />
+
+        <EditText
+            android:id="@+id/messageInput"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/input_background"
+            android:hint="Message"
+            android:textColorHint="#999999"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
+
+        <ImageView
+            android:id="@+id/sendButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_send"
+            android:background="@drawable/send_button_background"
+            android:layout_marginStart="8dp"
+            android:padding="6dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Send" />
+    </LinearLayout>
+
+    <!-- Bottom indicator -->
+    <View
+        android:layout_width="134dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#000000"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>

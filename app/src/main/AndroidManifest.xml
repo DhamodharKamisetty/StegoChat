@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.stegochat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Stegochat"
+        tools:targetApi="31">
+        <activity
+            android:name=".ResetpasswordActivity"
+            android:exported="false" />
+        <!-- Deep Link Activity for Invite Links -->
+        <activity
+            android:name=".InviteLinkActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+
+            <!-- HTTPS deep links -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="stego.chat"
+                    android:pathPrefix="/invite"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.stego.chat"
+                    android:pathPrefix="/invite"
+                    android:scheme="https" />
+            </intent-filter>
+            <!-- Custom scheme fallback -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="invite"
+                    android:scheme="stegochat" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FriendrequestacceptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StegoimageshareActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LogoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SoundandvibrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfilevisibilityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChangepasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LanguageselectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileeditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FirestoreTestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DecryptmessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PasswordverificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Chooseimage1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteconversationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ArchivechatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PinconversationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EncryptchatoptionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HidemessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatactivityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThreedotsActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".ThreedotsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MessageinterfaceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FreindrequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FriendchatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotpasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateaccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Loginpage"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Stegochat.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

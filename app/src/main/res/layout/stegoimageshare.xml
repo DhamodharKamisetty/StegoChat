@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        tools:ignore="ExtraText">
+
+        <!-- Success Icon -->
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_check_circle"
+            android:tint="#4CAF50"
+            android:layout_marginTop="32dp"
+            android:contentDescription="Success"
+            tools:ignore="ContentDescription" />
+
+        <!-- Title Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stego Image Saved\nSuccessfully"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            tools:ignore="HardcodedText" />
+
+        <!-- Saved Path -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved to:\nPhone Storage > StegoChat > HiddenImages/"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Preview Image -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_image_bg"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_image"
+            tools:ignore="ContentDescription" />
+
+        <!-- View Image Button -->
+        <Button
+            android:id="@+id/btnViewImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#4CAF50"
+            android:fontFamily="sans-serif-medium"
+            android:text="View Image"
+            android:textColor="#FFFFFF"
+            tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+
+        <!-- Share Image Button -->
+        <Button
+            android:id="@+id/btnShareImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share Image"
+            android:backgroundTint="#EEEEEE"
+            android:textColor="#000000"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif"
+            tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+        <!-- Back to Home -->
+        <TextView
+            android:id="@+id/tvBackHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back to Home"
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            tools:ignore="HardcodedText" />
+
+        <!-- Bottom Note -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5F5F5"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_info"
+                android:tint="#999999"
+                tools:ignore="ContentDescription,UseAppTint" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You can find your hidden image anytime in the StegoChat folder"
+                android:textColor="#666666"
+                android:textSize="13sp"
+                android:layout_marginStart="8dp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

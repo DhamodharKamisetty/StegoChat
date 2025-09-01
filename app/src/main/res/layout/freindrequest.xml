@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Status Bar Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@android:color/transparent" />
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="16dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/white">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back"
+            android:padding="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            tools:ignore="HardcodedText" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add a Friend"
+            android:textColor="#1A1A1A"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginHorizontal="16dp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Empty space for balance -->
+        <View
+            android:layout_width="24dp"
+            android:layout_height="24dp" />
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0" />
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo17"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="Profile image"
+            tools:ignore="HardcodedText" />
+
+        <!-- Share Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share your invite link to connect..."
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            tools:ignore="HardcodedText" />
+
+        <!-- Invite Link -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/white_rounded_card"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp">
+
+            <TextView
+                android:id="@+id/inviteLinkText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="stego.chat/invite/abc123"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:gravity="center"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <!-- Copy Link Button -->
+        <Button
+            android:id="@+id/copyLinkButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Copy Link"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:background="@drawable/purple_button_background"
+            android:elevation="4dp"
+            android:layout_marginBottom="24dp"
+            tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+        <!-- Social Share Icons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="32dp">
+
+            <ImageView
+                android:id="@+id/whatsappShare"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/logo31"
+                android:background="@drawable/circular_button_bg"
+                android:padding="12dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="WhatsApp"
+                android:clickable="true"
+                android:focusable="true"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/emailShare"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/logo32"
+                android:background="@drawable/circular_button_bg"
+                android:padding="12dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Email"
+                android:clickable="true"
+                android:focusable="true"
+                tools:ignore="HardcodedText" />
+
+            <ImageView
+                android:id="@+id/generalShare"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/logo33"
+                android:background="@drawable/circular_button_bg"
+                android:padding="12dp"
+                android:contentDescription="Share"
+                android:clickable="true"
+                android:focusable="true"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <!-- Helper Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:text="Friends using this link can chat and exchange secure images with you"
+            android:textColor="#999999"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+    </LinearLayout>
+
+    <!-- Home Indicator -->
+    <View
+        android:layout_width="134dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#000000"
+        android:alpha="0.3"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>

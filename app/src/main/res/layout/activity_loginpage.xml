@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp">
+
+    <!-- Top Circular Icon with Blue Padlock -->
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/circular_icon_background"
+        android:gravity="center"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_lock_blue"
+            android:contentDescription="Secure lock icon"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <!-- Welcome Text -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to StegoChat"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A1A"
+        android:layout_marginBottom="8dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login to continue securely"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="40dp"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+    <!-- Email Input Field -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@drawable/input_field_background"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_email_grey"
+            android:layout_marginEnd="12dp"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Enter your email"
+            android:textSize="16sp"
+            android:textColor="#1A1A1A"
+            android:textColorHint="#999999"
+            android:inputType="textEmailAddress"
+            tools:ignore="Autofill,HardcodedText,TextFields,TextContrastCheck" />
+    </LinearLayout>
+
+    <!-- Password Input Field -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="@drawable/input_field_background"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_lock_grey"
+            android:layout_marginEnd="12dp"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/passwordInput"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Enter your password"
+            android:textSize="16sp"
+            android:textColor="#1A1A1A"
+            android:textColorHint="#999999"
+            android:inputType="textPassword"
+            tools:ignore="Autofill,HardcodedText,TextContrastCheck" />
+
+        <ImageView
+            android:id="@+id/eyeIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_eye_grey"
+            android:layout_marginStart="12dp"
+            android:clickable="true"
+            android:focusable="true"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <!-- Forgot Password Link -->
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="32dp"
+        android:text="Forgot Password?"
+        android:textColor="#4671f2"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:focusable="true"
+        tools:ignore="HardcodedText,TextContrastCheck" />
+
+    <!-- Login Button with Gradient -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Login"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:background="@drawable/login_button_gradient"
+        android:layout_marginBottom="24dp"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <!-- Sign Up Link -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="32dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? "
+            android:textColor="#666666"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/signupRedirect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textColor="#4671f2"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+    </LinearLayout>
+
+    <!-- Bottom Home Indicator -->
+    <View
+        android:layout_width="134dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#000000"
+        android:alpha="0.3"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>

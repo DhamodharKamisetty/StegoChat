@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- App Logo -->
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo17"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_background"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="StegoChat Logo"
+        tools:ignore="HardcodedText" />
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You've been invited to join StegoChat!"
+        android:textColor="#1A1A1A"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Invite Code -->
+    <TextView
+        android:id="@+id/inviteCodeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Invite Code: abc123"
+        android:textColor="#666666"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Description -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Join StegoChat for secure messaging with steganography technology. Hide secret messages in images and share them securely with your friends."
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="48dp"
+        tools:ignore="HardcodedText" />
+
+    <!-- Sign Up Button -->
+    <Button
+        android:id="@+id/signupButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Create Account"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:background="@drawable/purple_button_background"
+        android:elevation="4dp"
+        android:layout_marginBottom="16dp"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="I already have an account"
+        android:textStyle="bold"
+        android:textColor="#4c51ff"
+        android:textSize="16sp"
+        android:background="@drawable/white_button_background"
+        android:elevation="2dp"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+</LinearLayout> 

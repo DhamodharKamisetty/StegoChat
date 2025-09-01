@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/logo4"
+            android:contentDescription="Back"
+            android:layout_marginEnd="16dp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Choose Image"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Camera Capture Option -->
+            <LinearLayout
+                android:id="@+id/cameraCaptureOption"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/logo15"
+                    android:tint="#007AFF"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Camera"
+                    tools:ignore="HardcodedText,UseAppTint" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Capture from Camera"
+                    android:textColor="#007AFF"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,TextContrastCheck" />
+            </LinearLayout>
+
+            <!-- Gallery Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or select from gallery:"
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp"
+                tools:ignore="HardcodedText" />
+
+            <!-- Image Grid -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="3"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false"
+                android:useDefaultMargins="true">
+
+                <!-- Row 1 -->
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo17"
+                    android:background="@drawable/logo17"
+                    android:contentDescription="Mountain sunset"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo19"
+                    android:background="@drawable/logo19"
+                    android:contentDescription="Desert landscape"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo20"
+                    android:background="@drawable/logo20"
+                    android:contentDescription="Arch at sunset"
+                    tools:ignore="HardcodedText" />
+
+                <!-- Row 2 -->
+                <ImageView
+                    android:id="@+id/image4"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/logo21"
+                    android:contentDescription="Lake with mountains"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo21"
+                    tools:ignore="HardcodedText,ImageContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/image5"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo23"
+                    android:background="@drawable/logo23"
+                    android:contentDescription="Red rock formation"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:id="@+id/image6"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:background="@drawable/logo24"
+                    android:contentDescription="White cat"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo24"
+                    tools:ignore="HardcodedText,ImageContrastCheck" />
+
+                <!-- Row 3 -->
+                <ImageView
+                    android:id="@+id/image7"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo25"
+                    android:background="@drawable/logo25"
+                    android:contentDescription="Golden sunset"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:id="@+id/image8"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo26"
+                    android:background="@drawable/logo26"
+                    android:contentDescription="Indoor lighting"
+                    tools:ignore="HardcodedText" />
+
+                <ImageView
+                    android:id="@+id/image9"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_columnWeight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo27"
+                    android:background="@drawable/logo27"
+                    android:contentDescription="Canyon view"
+                    tools:ignore="HardcodedText" />
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Continue"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#4c51ff"
+            android:layout_marginBottom="16dp"
+            tools:ignore="HardcodedText,VisualLintButtonSize" />
+    </LinearLayout>
+
+    <!-- Home Indicator -->
+    <View
+        android:layout_width="134dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#000000"
+        android:alpha="0.3"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>
